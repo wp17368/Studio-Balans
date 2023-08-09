@@ -42,6 +42,8 @@ input::-webkit-inner-spin-button {
   color: #365044;
 }
 section {
+  display: grid;
+  align-items: center;
   padding: 2rem 7%;
   text-transform: none;
   min-height: 100vh;
@@ -82,6 +84,7 @@ a:link {
 }
 .header .logo img {
   height: 6rem;
+
 }
 .header .logo img:hover {
   border-radius: 3rem;
@@ -91,12 +94,12 @@ a:link {
   display:none;
 }
 .header .navbar a {
+  color:var(--main-color);
   margin: 0 1rem;
   font-size: 1.6rem;
-  color: #fff;
 }
 .header .navbar a:hover {
-  color: var(--main-color);
+  color:var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
   padding-bottom: 0.5rem;
 }
@@ -108,26 +111,39 @@ a:link {
 }
 .header .socialmedia-header img {
   cursor: pointer;
-  color: #fff;
   cursor: pointer;
   font-size: 2.5rem;
   height: 4rem;
   margin: 4px;
 }
 .socialmediabuttonhover:hover {
+  transition-duration:300ms;
   border-radius: 2rem;
   box-shadow: inset 0 0 50px #d3ad7f6c, /* outer white */ 0px 0 30px #d3ad7f;
 }
+.logo{
+  transition-duration:700ms;
+  border-radius: 100rem;
+  box-shadow: inset 0 0 50px #d3ad7f00, /* outer white */ 0px 0 30px #d3ad7f00;
+}
+.logo:hover{
+  background-color:var(--main-color);
+  border-radius: 100rem;
+  box-shadow: inset 0 0 50px #d3ad7f6c, /* outer white */ 0px 0 30px #d3ad7f;
+}
 /*HOME SECTION STYLE*/
+video {
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+}
 .home {
-  display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   justify-items: left;
-  background: url(../jpgs/logo.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 .home .content {
   max-width: 60rem;
@@ -160,13 +176,9 @@ a:link {
   right: 0%;
 }
 .header .navbar.active a:hover {
-  color: var(--bg);
+  color: var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
   padding-bottom: 0.5rem;
-}
-#about {
-  display: grid;
-  align-items: center;
 }
 .about .heading {
   margin: 0;
@@ -201,8 +213,6 @@ a:link {
   line-height: 1.2;
 }
 #services {
-  display: grid;
-  align-items: center;
   background-color: var(--main-color);
 }
 .services span {
@@ -243,11 +253,6 @@ a:link {
   padding: 1.2rem;
   font-size: 1.6rem;
 }
-#certifications {
-  padding-top: 0;
-  display: grid;
-  align-items: center;
-}
 .certifications .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -277,9 +282,6 @@ a:link {
   font-weight: lighter;
 }
 #contact {
-  padding-top: 0;
-  display: grid;
-  align-items: center;
   background-color: var(--main-color);
 }
 .contact .heading{
@@ -353,11 +355,6 @@ textarea::-webkit-scrollbar {
 .contact .btn {
   border: none;
 }
-#faq {
-  padding-top: 0;
-  display: grid;
-  align-items: center;
-}
 .faq h3 {
   color: #fff;
   font-weight: lighter;
@@ -390,10 +387,6 @@ textarea::-webkit-scrollbar {
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-    background: url(../jpgs/logo.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
   }
   .home .content p {
     font-size: 2.2rem;
@@ -422,17 +415,18 @@ textarea::-webkit-scrollbar {
     width: 20rem;
     top: 100%;
     right: 100%;
-    background: var(--main-color);
+    background-color:var(--bg);
     height: calc(100vh);
   }
   .header .navbar a {
-    color: white;
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
   }
-
+  .header .navbar a:hover {
+    color:var(--main-color);
+  }
   html {
     font-size: 55%;
     scroll-padding-top: 9rem;
@@ -445,7 +439,6 @@ textarea::-webkit-scrollbar {
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-    background: url(../jpgs/logo.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
