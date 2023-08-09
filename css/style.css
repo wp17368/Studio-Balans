@@ -422,11 +422,11 @@ textarea::-webkit-scrollbar {
     width: 20rem;
     top: 100%;
     right: 100%;
-    background: var(--main-color);
+    background-color:var(--bg);
     height: calc(100vh);
   }
   .header .navbar a {
-    color: white;
+    color: var(--main-color);
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
