@@ -1,6 +1,6 @@
 "use strict";
 const navbar = document.querySelector(".navbar");
-const menuBtn = document.querySelector("#menu-btn");
+const menuBtn = document.querySelector("#menuBtn");
 const facebookBtn = document.querySelector("#facebook-btn");
 const sendEmailBtn = document.querySelector("#send-email-btn");
 
