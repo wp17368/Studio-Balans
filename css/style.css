@@ -224,7 +224,7 @@ video {
 .services .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1.5rem;
+  gap: 0;
 }
 .services .box-container .box {
   display: grid;
@@ -238,13 +238,20 @@ video {
   font-size: 2.2rem;
   background-color: var(--main-color);
 }
-.services .box-container .box img {
-  width: 30rem;
-}
-.services .box-container .box .price {
+.services .info  {
+  display:none;
   color: var(--bg);
   font-size: 2rem;
   font-weight: lighter;
+}
+.services .box:hover .info {
+  display:block;
+}
+.services .box:hover .image-box {
+  display:none;
+}
+.services .box-container .box img {
+  width: 30rem;
 }
 .services .disclaimer p {
   text-align:center;
