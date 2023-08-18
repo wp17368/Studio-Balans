@@ -11,3 +11,4 @@ function toggleMenu() {
 menuBtn.addEventListener("click", toggleMenu);
 window.addEventListener("scroll", navbar.classList.remove("active"));
 
+
