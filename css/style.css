@@ -239,13 +239,27 @@ video {
   background-color: var(--main-color);
 }
 .services .info  {
-  display:none;
   color: var(--bg);
   font-size: 2rem;
   font-weight: lighter;
+  display:none;
+  visibility: hidden;
+  opacity: 0;
+}
+.services .btn {
+  visibility: hidden;
+  opacity: 0;
 }
 .services .box:hover .info {
   display:block;
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 800ms;
+}
+.services .box:hover .btn {
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 800ms;
 }
 .services .box:hover .image-box {
   display:none;
