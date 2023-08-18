@@ -39,7 +39,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 ::placeholder {
-  color: #365044;
+  color:var(--bg);
 }
 section {
   display: grid;
